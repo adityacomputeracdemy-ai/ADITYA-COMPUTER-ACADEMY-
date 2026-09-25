@@ -2508,7 +2508,156 @@ document
 
 });
 
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+
+/* Firebase Configuration */
+const firebaseConfig = {
+  apiKey: "AIzaSyDbNxgO61_y_nM5GMJvyICYlbBCwev-QGXI",
+  authDomain: "aditya-computer-academy.firebaseapp.com",
+  projectId: "aditya-computer-academy",
+  storageBucket: "aditya-computer-academy.firebasestorage.app",
+  messagingSenderId: "679070166871",
+  appId: "1:679070166871:web:fe584ad746e57b33e8d812",
+  measurementId: "G-9YSTLW5PSV"
+};
+
+
+/* Firebase Start */
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+/* Mobile Menu */
+document
+.querySelectorAll(".nav-menu a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navMenu")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+
+/* Admission Form */
+const admissionForm = document.getElementById("admissionForm");
+const formMessage = document.getElementById("formMessage");
+
+if (admissionForm) {
+
+    admissionForm.addEventListener("submit", async function(e) {
+
+        e.preventDefault();
+
+        const submitBtn = admissionForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Submitting...";
+
+
+        const admissionData = {
+
+            studentName:
+                document.getElementById("studentName").value.trim(),
+
+            fatherName:
+                document.getElementById("fatherName").value.trim(),
+
+            motherName:
+                document.getElementById("motherName").value.trim(),
+
+            dob:
+                document.getElementById("dob").value,
+
+            gender:
+                document.getElementById("gender").value,
+
+            mobile:
+                document.getElementById("mobile").value.trim(),
+
+            email:
+                document.getElementById("email").value.trim(),
+
+            qualification:
+                document.getElementById("qualification").value,
+
+            course:
+                document.getElementById("course").value,
+
+            school:
+                document.getElementById("school").value.trim(),
+
+            city:
+                document.getElementById("city").value.trim(),
+
+            address:
+                document.getElementById("address").value.trim(),
+
+            status: "New",
+
+            submittedAt: serverTimestamp()
+
+        };
+
+
+        try {
+
+            const docRef = await addDoc(
+                collection(db, "admissions"),
+                admissionData
+            );
+
+
+            formMessage.innerHTML =
+                "✅ <b>Admission Form Successfully Submitted!</b><br>" +
+                "Application ID: <b>" + docRef.id + "</b>";
+
+            formMessage.style.color = "green";
+
+
+            admissionForm.reset();
+
+
+        } catch (error) {
+
+            console.error("Firebase Error:", error);
+
+            formMessage.innerHTML =
+                "❌ Form submit नहीं हुआ। कृपया दोबारा कोशिश करें।";
+
+            formMessage.style.color = "red";
+
+        }
+
+
+        submitBtn.disabled = false;
+        submitBtn.innerText = "📝 Submit Admission Form";
+
+    });
+
+}
+
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
