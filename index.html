@@ -1,2595 +1,1140 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Aditya Computer Academy | Computer Institute in Kandwa</title>
-
-<meta name="description"
-content="Aditya Computer Academy Kandwa - ADCA, DCA, CCC, Tally Prime, DTP, MS Office, Typing, AI & Web Designing courses. Online Admission Open.">
-
-<meta name="keywords"
-content="Aditya Computer Academy, Computer Academy Kandwa, ADCA, DCA, CCC, Tally, Computer Course Kandwa">
-
-<style>
-
-/* =========================
-   BASIC
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5fbff;
-    color:#172033;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-img{
-    max-width:100%;
-}
-
-.container{
-    width:92%;
-    max-width:1200px;
-    margin:auto;
-}
-
-section{
-    padding:70px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.section-title h2{
-    font-size:34px;
-    color:#075985;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:#64748b;
-}
-
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar{
-    background:#075985;
-    color:white;
-    padding:8px 0;
-    font-size:14px;
-}
-
-.topbar-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:15px;
-}
-
-.topbar a{
-    color:white;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:999;
-    background:white;
-    box-shadow:0 3px 15px rgba(0,0,0,.10);
-}
-
-.navbar{
-    min-height:75px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.logo-area{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo{
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#075985,#16a34a);
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:bold;
-    font-size:20px;
-    border:3px solid #facc15;
-}
-
-.logo-text h1{
-    font-size:19px;
-    color:#075985;
-}
-
-.logo-text span{
-    font-size:12px;
-    color:#64748b;
-}
-
-.nav-menu{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    list-style:none;
-}
-
-.nav-menu a{
-    font-size:14px;
-    font-weight:bold;
-    color:#334155;
-}
-
-.nav-menu a:hover{
-    color:#075985;
-}
-
-.menu-btn{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:620px;
-    display:flex;
-    align-items:center;
-    background:
-    linear-gradient(rgba(3,105,161,.88),rgba(5,150,105,.82)),
-    radial-gradient(circle at top right,#38bdf8,transparent 35%);
-    color:white;
-}
-
-.hero-content{
-    max-width:800px;
-    text-align:center;
-    margin:auto;
-}
-
-.badge{
-    display:inline-block;
-    background:#facc15;
-    color:#172033;
-    padding:8px 18px;
-    border-radius:30px;
-    font-weight:bold;
-    margin-bottom:20px;
-}
-
-.hero h2{
-    font-size:52px;
-    line-height:1.15;
-    margin-bottom:15px;
-}
-
-.hero h3{
-    font-size:26px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:18px;
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 24px;
-    border-radius:8px;
-    font-weight:bold;
-    border:none;
-    cursor:pointer;
-    margin:5px;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-.btn-yellow{
-    background:#facc15;
-    color:#172033;
-}
-
-.btn-white{
-    background:white;
-    color:#075985;
-}
-
-.btn-green{
-    background:#16a34a;
-    color:white;
-}
-
-.btn-blue{
-    background:#075985;
-    color:white;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.stats{
-    margin-top:-45px;
-    position:relative;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.stat{
-    background:white;
-    padding:25px 15px;
-    text-align:center;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,.10);
-}
-
-.stat h3{
-    color:#075985;
-    font-size:28px;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    background:white;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    align-items:center;
-}
-
-.about-box{
-    background:#f0f9ff;
-    padding:30px;
-    border-radius:15px;
-    border-left:5px solid #075985;
-}
-
-.about-box h3{
-    color:#075985;
-    margin-bottom:15px;
-}
-
-.director{
-    background:linear-gradient(135deg,#e0f2fe,#dcfce7);
-    padding:35px;
-    border-radius:20px;
-    text-align:center;
-}
-
-.director-icon{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    margin:auto auto 15px;
-    background:#075985;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:42px;
-}
-
-/* =========================
-   COURSES
-========================= */
-
-.courses{
-    background:#f0f9ff;
-}
-
-.course-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.course-card{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    border-top:4px solid #075985;
-    transition:.3s;
-}
-
-.course-card:hover{
-    transform:translateY(-5px);
-}
-
-.course-icon{
-    font-size:38px;
-    margin-bottom:10px;
-}
-
-.course-card h3{
-    color:#075985;
-    margin-bottom:8px;
-}
-
-.price{
-    color:#16a34a;
-    font-weight:bold;
-    font-size:18px;
-    margin-bottom:12px;
-}
-
-.subjects{
-    display:none;
-    margin-top:15px;
-    padding-top:15px;
-    border-top:1px solid #ddd;
-}
-
-.subjects ul{
-    padding-left:20px;
-}
-
-.course-buttons{
-    margin-top:15px;
-}
-
-/* =========================
-   NOTES
-========================= */
-
-.notes{
-    background:white;
-}
-
-.note-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.note-card{
-    padding:25px;
-    background:#f8fafc;
-    border-radius:15px;
-    border:1px solid #e2e8f0;
-}
-
-.note-card h3{
-    color:#075985;
-    margin-bottom:10px;
-}
-
-/* =========================
-   WHY COMPUTER
-========================= */
-
-.why{
-    background:#eff6ff;
-}
-
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.why-card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 4px 15px rgba(0,0,0,.06);
-}
-
-.why-card .icon{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-/* =========================
-   NOTICE
-========================= */
-
-.notice{
-    background:white;
-}
-
-.notice-box{
-    max-width:900px;
-    margin:auto;
-    background:#fff7ed;
-    border-left:6px solid #f97316;
-    padding:25px;
-    border-radius:10px;
-}
-
-.notice-box li{
-    margin:10px 0;
-}
-
-/* =========================
-   ADMISSION
-========================= */
-
-.admission{
-    background:linear-gradient(135deg,#e0f2fe,#dcfce7);
-}
-
-.form-box{
-    max-width:1000px;
-    margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 8px 30px rgba(0,0,0,.10);
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-}
-
-.form-group{
-    display:flex;
-    flex-direction:column;
-}
-
-.form-group.full{
-    grid-column:1/-1;
-}
-
-.form-group label{
-    font-weight:bold;
-    margin-bottom:6px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea{
-    padding:12px;
-    border:1px solid #cbd5e1;
-    border-radius:7px;
-    font-size:15px;
-    outline:none;
-}
-
-.form-group textarea{
-    min-height:100px;
-    resize:vertical;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus{
-    border-color:#075985;
-}
-
-.declaration{
-    margin:20px 0;
-    background:#f8fafc;
-    padding:15px;
-    border-radius:8px;
-}
-
-/* =========================
-   RESULTS
-========================= */
-
-.results{
-    background:white;
-}
-
-.result-box{
-    max-width:650px;
-    margin:auto;
-    background:#f8fafc;
-    padding:30px;
-    border-radius:15px;
-}
-
-.result-box input{
-    width:100%;
-    padding:13px;
-    border:1px solid #cbd5e1;
-    border-radius:7px;
-    margin-bottom:10px;
-}
-
-/* =========================
-   CERTIFICATE
-========================= */
-
-.certificate{
-    background:#f0fdf4;
-}
-
-.verify-box{
-    max-width:650px;
-    margin:auto;
-    padding:30px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.verify-box input{
-    width:100%;
-    padding:13px;
-    margin-bottom:10px;
-    border:1px solid #cbd5e1;
-    border-radius:7px;
-}
-
-/* =========================
-   GALLERY
-========================= */
-
-.gallery{
-    background:#f8fafc;
-}
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-}
-
-.gallery-item{
-    height:180px;
-    border-radius:12px;
-    background:linear-gradient(135deg,#bae6fd,#bbf7d0);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    font-weight:bold;
-    color:#075985;
-}
-
-/* =========================
-   THOUGHTS
-========================= */
-
-.thoughts{
-    background:white;
-}
-
-.thought-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.thought{
-    padding:20px;
-    background:#f0f9ff;
-    border-left:4px solid #075985;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    background:#075985;
-    color:white;
-}
-
-.contact .section-title h2{
-    color:white;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.contact-card{
-    padding:25px;
-    background:rgba(255,255,255,.10);
-    border-radius:15px;
-    text-align:center;
-}
-
-.contact-card h3{
-    margin-bottom:10px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#082f49;
-    color:white;
-    padding:35px 0 15px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:30px;
-}
-
-footer h3{
-    margin-bottom:12px;
-}
-
-footer a{
-    display:block;
-    margin:7px 0;
-    color:#dbeafe;
-}
-
-.footer-bottom{
-    text-align:center;
-    border-top:1px solid rgba(255,255,255,.15);
-    margin-top:25px;
-    padding-top:15px;
-    font-size:13px;
-}
-
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    background:#25D366;
-    color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:30px;
-    z-index:1000;
-    box-shadow:0 4px 15px rgba(0,0,0,.25);
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-    .nav-menu{
-        position:absolute;
-        top:75px;
-        left:0;
-        width:100%;
-        background:white;
-        flex-direction:column;
-        align-items:flex-start;
-        padding:20px;
-        display:none;
-        box-shadow:0 8px 15px rgba(0,0,0,.10);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ADITYA COMPUTER ACADEMY | Kandwa</title>
+
+  <meta name="description"
+        content="Aditya Computer Academy Kandwa - ADCA, DCA, CCC, Tally Prime, MS Office, Typing, AI & Web Designing">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,"Noto Sans Devanagari",sans-serif;
     }
 
-    .nav-menu.active{
-        display:flex;
+    html{
+      scroll-behavior:smooth;
     }
 
-    .menu-btn{
-        display:block;
+    body{
+      background:#f4f9ff;
+      color:#10233b;
     }
 
-    .stats-grid{
-        grid-template-columns:repeat(2,1fr);
+    a{
+      text-decoration:none;
     }
 
-    .course-grid{
-        grid-template-columns:repeat(2,1fr);
+    /* ================= HEADER ================= */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(5,20,48,.96);
+      backdrop-filter:blur(12px);
+      padding:12px 5%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      box-shadow:0 5px 25px rgba(0,0,0,.15);
     }
 
-    .about-grid{
-        grid-template-columns:1fr;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:white;
     }
 
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
+    .logo{
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#00c6ff,#7357ff);
+      font-size:18px;
+      font-weight:bold;
+      box-shadow:0 8px 25px rgba(0,198,255,.35);
     }
 
-    .gallery-grid{
-        grid-template-columns:repeat(2,1fr);
+    .brand b{
+      display:block;
+      font-size:16px;
     }
 
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    section{
-        padding:50px 0;
+    .brand small{
+      color:#b8dfff;
+      font-size:11px;
     }
 
-    .topbar-content{
-        flex-direction:column;
-        text-align:center;
+    nav{
+      display:flex;
+      align-items:center;
+      gap:16px;
     }
+
+    nav a{
+      color:white;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    nav a:hover{
+      color:#55d9ff;
+    }
+
+    .admin-btn{
+      border:1px solid #55d9ff;
+      padding:9px 13px;
+      border-radius:10px;
+    }
+
+    .menu{
+      display:none;
+      color:white;
+      background:none;
+      border:0;
+      font-size:28px;
+      cursor:pointer;
+    }
+
+    /* ================= HERO ================= */
 
     .hero{
-        min-height:560px;
+      min-height:650px;
+      padding:80px 7%;
+      display:grid;
+      grid-template-columns:1.5fr .7fr;
+      gap:40px;
+      align-items:center;
+
+      background:
+      radial-gradient(circle at 80% 20%,
+      rgba(104,87,255,.35),
+      transparent 30%),
+
+      linear-gradient(
+      135deg,
+      #041632,
+      #07517e,
+      #057c9e
+      );
+
+      color:white;
     }
 
-    .hero h2{
-        font-size:36px;
+    .badge{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:30px;
+      background:#b8efff;
+      color:#064a72;
+      font-size:12px;
+      font-weight:bold;
     }
 
-    .hero h3{
-        font-size:21px;
+    .hero h1{
+      font-size:clamp(40px,6vw,70px);
+      line-height:1.05;
+      margin:20px 0;
+    }
+
+    .hero h1 span{
+      color:#55dcff;
     }
 
     .hero p{
-        font-size:16px;
+      font-size:19px;
+      line-height:1.7;
+      max-width:750px;
+      color:#d9f3ff;
+      margin-bottom:20px;
     }
 
-    .stats-grid,
-    .course-grid,
-    .why-grid,
-    .contact-grid,
-    .note-grid{
-        grid-template-columns:1fr;
+    .btn{
+      display:inline-block;
+      padding:13px 20px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#00aaff,#6658ff);
+      color:white;
+      border:0;
+      font-weight:bold;
+      cursor:pointer;
+      margin:5px 5px 5px 0;
+      box-shadow:0 8px 25px rgba(0,80,150,.2);
     }
 
-    .thought-grid{
-        grid-template-columns:1fr;
+    .whatsapp{
+      background:#1dbb63;
     }
 
-    .form-grid{
-        grid-template-columns:1fr;
+    .whatsapp2{
+      background:#078f53;
     }
 
-    .form-group.full{
-        grid-column:auto;
+    .quick{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:20px;
     }
 
-    .gallery-grid{
-        grid-template-columns:1fr 1fr;
+    .quick span{
+      padding:9px 12px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08);
+      border-radius:10px;
+      font-size:12px;
+    }
+
+    .hero-card{
+      padding:35px;
+      text-align:center;
+      border-radius:25px;
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.2);
+    }
+
+    .hero-logo{
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#00c6ff,#7357ff);
+      font-size:30px;
+      font-weight:bold;
+    }
+
+    .hero-card h3{
+      margin:18px 0 8px;
+    }
+
+    .hero-card b{
+      display:block;
+      color:#75e4ff;
+      margin:8px;
+    }
+
+    /* ================= STATS ================= */
+
+    .stats{
+      max-width:1050px;
+      margin:-45px auto 0;
+      position:relative;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px;
+      padding:0 20px;
+    }
+
+    .stat{
+      background:white;
+      padding:20px;
+      text-align:center;
+      border-radius:17px;
+      box-shadow:0 15px 45px rgba(0,40,80,.1);
+    }
+
+    .stat b{
+      display:block;
+      color:#087ac2;
+      font-size:25px;
+    }
+
+    .stat span{
+      font-size:12px;
+      color:#666;
+    }
+
+    /* ================= COMMON ================= */
+
+    section{
+      padding:80px 6%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:35px;
+    }
+
+    .section-title span{
+      display:inline-block;
+      background:#b9efff;
+      color:#07517c;
+      padding:7px 13px;
+      border-radius:30px;
+      font-size:12px;
+      font-weight:bold;
     }
 
     .section-title h2{
-        font-size:28px;
+      font-size:35px;
+      margin:13px 0 8px;
     }
 
-    .logo-text h1{
-        font-size:16px;
+    .section-title p{
+      color:#667;
     }
-}
 
-</style>
+    /* ================= COURSES ================= */
+
+    .courses{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .course{
+      background:white;
+      padding:23px;
+      border-radius:20px;
+      border:1px solid #e1edf6;
+      box-shadow:0 12px 35px rgba(0,40,80,.07);
+      transition:.3s;
+    }
+
+    .course:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 45px rgba(0,40,80,.14);
+    }
+
+    .course-icon{
+      font-size:35px;
+    }
+
+    .course h3{
+      color:#075d9b;
+      margin:10px 0;
+    }
+
+    .fee{
+      color:#079b60;
+      font-weight:bold;
+    }
+
+    .subjects{
+      display:none;
+      margin-top:15px;
+      padding:14px;
+      border-radius:12px;
+      background:#eff9ff;
+      font-size:13px;
+      line-height:1.8;
+    }
+
+    .subjects.show{
+      display:block;
+    }
+
+    /* ================= WHY COMPUTER ================= */
+
+    .why-section{
+      max-width:none;
+      background:linear-gradient(#effaff,#fff);
+    }
+
+    .why{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .why-card{
+      background:white;
+      padding:25px;
+      border-radius:20px;
+      border:1px solid #e1edf6;
+    }
+
+    .why-card .icon{
+      font-size:30px;
+    }
+
+    .why-card h3{
+      margin:10px 0;
+    }
+
+    .why-card p{
+      color:#5d6c79;
+      line-height:1.6;
+    }
+
+    /* ================= THOUGHTS ================= */
+
+    .thoughts{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+    }
+
+    .thought{
+      padding:22px;
+      background:linear-gradient(135deg,#fff,#effaff);
+      border-left:5px solid #13afe8;
+      border-radius:14px;
+      box-shadow:0 8px 25px rgba(0,0,0,.05);
+      font-weight:bold;
+      line-height:1.6;
+    }
+
+    /* ================= ADMISSION ================= */
+
+    .admission-section{
+      max-width:none;
+      background:#eff8ff;
+    }
+
+    .form{
+      max-width:950px;
+      margin:auto;
+      padding:30px;
+      background:white;
+      border-radius:25px;
+      box-shadow:0 15px 50px rgba(0,40,80,.1);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:13px;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:13px;
+      border:1px solid #ccdce7;
+      border-radius:10px;
+      font-size:15px;
+      outline:none;
+    }
+
+    textarea{
+      min-height:110px;
+      resize:vertical;
+      grid-column:1/-1;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+      border-color:#08a6dc;
+      box-shadow:0 0 0 3px rgba(8,166,220,.1);
+    }
+
+    .check{
+      display:block;
+      margin:18px 0;
+      font-size:13px;
+    }
+
+    .check input{
+      width:auto;
+    }
+
+    #formMessage{
+      margin-top:15px;
+      font-weight:bold;
+    }
+
+    /* ================= NOTICE ================= */
+
+    .notice{
+      max-width:900px;
+      margin:auto;
+      background:white;
+      border-left:5px solid #ffad2f;
+      padding:18px;
+      border-radius:14px;
+      box-shadow:0 8px 25px rgba(0,0,0,.06);
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact{
+      max-width:900px;
+      margin:auto;
+      padding:30px;
+      border-radius:22px;
+      color:white;
+      background:linear-gradient(135deg,#062348,#0a648f);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .contact p{
+      color:#d7efff;
+      margin:10px 0;
+    }
+
+    .contact a{
+      color:white;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#06172f;
+      color:#cfe9ff;
+      text-align:center;
+      padding:35px;
+    }
+
+    /* ================= FLOAT WHATSAPP ================= */
+
+    .float-whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:58px;
+      height:58px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#20b968;
+      color:white;
+      font-size:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.3);
+      z-index:999;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:950px){
+
+      nav{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:#061a38;
+        padding:20px;
+        flex-direction:column;
+      }
+
+      nav.show{
+        display:flex;
+      }
+
+      .menu{
+        display:block;
+      }
+
+      .hero{
+        grid-template-columns:1fr;
+      }
+
+      .courses{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .why{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .stats{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:600px){
+
+      .courses,
+      .why,
+      .thoughts,
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:65px 6%;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .stats{
+        grid-template-columns:repeat(2,1fr);
+        margin-top:-25px;
+      }
+
+      .contact{
+        display:block;
+      }
+
+      .brand b{
+        font-size:13px;
+      }
+
+      .brand small{
+        font-size:9px;
+      }
+
+      section{
+        padding:60px 5%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-     TOP BAR
-========================= -->
-
-<div class="topbar">
-<div class="container topbar-content">
-
-<div>
-📍 Kandwa Panchkoshi Road, 221106
-</div>
-
-<div>
-📞 <a href="tel:9305066046">9305066046</a>
-&nbsp; | &nbsp;
-📞 <a href="tel:9506793790">9506793790</a>
-</div>
-
-</div>
-</div>
-
-
-<!-- =========================
-     HEADER
-========================= -->
+<!-- ================= HEADER ================= -->
 
 <header>
 
-<div class="container navbar">
+  <a href="#home" class="brand">
 
-<div class="logo-area">
+    <span class="logo">ACA</span>
 
-<div class="logo">ACA</div>
+    <span>
+      <b>ADITYA COMPUTER ACADEMY</b>
+      <small>Kandwa Panchkoshi Road · 221106</small>
+    </span>
 
-<div class="logo-text">
-<h1>ADITYA COMPUTER ACADEMY</h1>
-<span>Computer Education & Skill Development</span>
-</div>
+  </a>
 
-</div>
+  <button class="menu"
+          onclick="document.querySelector('nav').classList.toggle('show')">
+    ☰
+  </button>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <nav>
 
-<ul class="nav-menu" id="navMenu">
+    <a href="#home">Home</a>
 
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About Us</a></li>
-<li><a href="#courses">Courses</a></li>
-<li><a href="#notes">Notes</a></li>
-<li><a href="#admission">Admission</a></li>
-<li><a href="#notice">Notice</a></li>
-<li><a href="#results">Results</a></li>
-<li><a href="#certificate">Certificate</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="admin.html">Admin Login</a></li>
+    <a href="#courses">Courses</a>
 
-</ul>
+    <a href="#why">Computer क्यों सीखें?</a>
 
-</div>
+    <a href="#thoughts">10 विचार</a>
+
+    <a href="#admission">Admission</a>
+
+    <a href="#notice">Notice</a>
+
+    <a href="#contact">Contact</a>
+
+    <a href="admin.html" class="admin-btn">
+      🔐 Admin Login
+    </a>
+
+  </nav>
 
 </header>
 
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- ================= HERO ================= -->
 
-<section class="hero" id="home">
+<section id="home" class="hero">
 
-<div class="container">
+  <div>
 
-<div class="hero-content">
+    <span class="badge">
+      🎓 ADMISSION OPEN 2026–27
+    </span>
 
-<span class="badge">🎓 ADMISSION OPEN 2026–27</span>
+    <h1>
+      आज की <span>Computer Education</span>,
+      कल का बेहतर Career
+    </h1>
 
-<h2>ADITYA COMPUTER ACADEMY</h2>
+    <p>
+      कम फीस में practical computer education —
+      ADCA, DCA, CCC, Tally Prime, MS Office,
+      Typing, AI & Web Designing.
+    </p>
 
-<h3>आज की Computer Education, कल का बेहतर Career</h3>
+    <a href="#admission" class="btn">
+      📝 Online Admission
+    </a>
 
-<p>
-कम फीस में बेहतर Computer Education,
-Practical Training और Career-oriented Courses.
-</p>
+    <a href="https://wa.me/919305066046"
+       target="_blank"
+       class="btn whatsapp">
+      💬 WhatsApp
+    </a>
 
-<a href="#admission" class="btn btn-yellow">
-📝 Online Admission
-</a>
+    <div class="quick">
 
-<a href="https://wa.me/919305066046" class="btn btn-white">
-💬 WhatsApp
-</a>
+      <span>💻 Practical Classes</span>
 
-<a href="tel:9305066046" class="btn btn-green">
-📞 Call Now
-</a>
+      <span>👨‍🎓 कमजोर विद्यार्थियों पर विशेष ध्यान</span>
 
-</div>
+      <span>📚 Career Useful Courses</span>
 
-</div>
+    </div>
+
+  </div>
+
+
+  <div class="hero-card">
+
+    <div class="hero-logo">
+      ACA
+    </div>
+
+    <h3>
+      ADITYA COMPUTER ACADEMY
+    </h3>
+
+    <p>
+      Learn · Practice · Grow
+    </p>
+
+    <b>📞 9305066046</b>
+
+    <b>📞 9506793790</b>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     STATS
-========================= -->
+<!-- ================= STATS ================= -->
 
 <div class="stats">
 
-<div class="container stats-grid">
+  <div class="stat">
+    <b>100%</b>
+    <span>Practical Focus</span>
+  </div>
 
-<div class="stat">
-<h3>8+</h3>
-<p>Professional Courses</p>
-</div>
+  <div class="stat">
+    <b>8+</b>
+    <span>Career Courses</span>
+  </div>
 
-<div class="stat">
-<h3>100%</h3>
-<p>Practical Focus</p>
-</div>
+  <div class="stat">
+    <b>2</b>
+    <span>WhatsApp Numbers</span>
+  </div>
 
-<div class="stat">
-<h3>1:1</h3>
-<p>Student Guidance</p>
-</div>
-
-<div class="stat">
-<h3>2026</h3>
-<p>Admission Open</p>
-</div>
-
-</div>
+  <div class="stat">
+    <b>2026–27</b>
+    <span>Admissions Open</span>
+  </div>
 
 </div>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ================= COURSES ================= -->
 
-<section class="about" id="about">
+<section id="courses">
 
-<div class="container">
+  <div class="section-title">
 
-<div class="section-title">
-<h2>About Aditya Computer Academy</h2>
-<p>आपके बेहतर Computer Career की शुरुआत</p>
-</div>
+    <span>OUR COURSES</span>
 
-<div class="about-grid">
+    <h2>अपना Course चुनें</h2>
 
-<div class="about-box">
+    <p>
+      किसी भी course पर click करके उसके subjects देखें।
+    </p>
 
-<h3>हमारे बारे में</h3>
-
-<p>
-<strong>ADITYA COMPUTER ACADEMY</strong> का उद्देश्य
-छात्रों को कम फीस में गुणवत्तापूर्ण Computer Education
-और Practical Training उपलब्ध कराना है।
-</p>
-
-<br>
-
-<p>
-यहाँ Computer Fundamentals से लेकर
-ADCA, DCA, CCC, Tally Prime, MS Office,
-Typing, DTP, AI और Web Designing तक
-अलग-अलग courses उपलब्ध हैं।
-</p>
-
-<br>
-
-<p>
-हमारा विशेष ध्यान Practical Knowledge,
-Regular Practice और कमजोर विद्यार्थियों पर
-व्यक्तिगत ध्यान देने पर रहता है।
-</p>
-
-</div>
+  </div>
 
 
-<div class="director">
+  <div class="courses">
 
-<div class="director-icon">
-👨‍🏫
-</div>
 
-<h3>Director</h3>
+    <!-- ADCA -->
 
-<h2>Aditya Kashyap</h2>
+    <div class="course">
 
-<p>
-Centre Director<br>
-ADITYA COMPUTER ACADEMY
-</p>
+      <div class="course-icon">💻</div>
 
-<br>
+      <h3>ADCA</h3>
 
-<p>
-“सीखिए, Practice कीजिए और अपने Skill को
-अपने Career की ताकत बनाइए।”
-</p>
+      <div class="fee">
+        ₹400 / Month
+      </div>
 
-</div>
+      <div class="subjects" id="adca">
 
-</div>
+        <b>ADCA Subjects:</b>
 
-</div>
+        <br>• Computer Fundamentals
+        <br>• Notepad
+        <br>• WordPad
+        <br>• Paint
+        <br>• MS Word
+        <br>• MS Excel
+        <br>• PowerPoint
+        <br>• Hindi & English Typing
+        <br>• Internet & Email
+        <br>• Tally Prime
+        <br>• Web Designing
+
+      </div>
+
+      <button class="btn"
+              onclick="toggleSubjects('adca')">
+        📚 View Subjects
+      </button>
+
+      <a href="#admission"
+         onclick="selectCourse('ADCA')"
+         class="btn">
+        Apply Now
+      </a>
+
+    </div>
+
+
+    <!-- DCA -->
+
+    <div class="course">
+
+      <div class="course-icon">🖥️</div>
+
+      <h3>DCA</h3>
+
+      <div class="fee">
+        ₹500 / Month
+      </div>
+
+      <div class="subjects" id="dca">
+
+        <b>DCA Subjects:</b>
+
+        <br>• Computer Fundamentals
+        <br>• Windows
+        <br>• MS Word
+        <br>• MS Excel
+        <br>• PowerPoint
+        <br>• Internet
+        <br>• Email
+        <br>• Typing
+        <br>• Practical Work
+
+      </div>
+
+      <button class="btn"
+              onclick="toggleSubjects('dca')">
+        📚 View Subjects
+      </button>
+
+      <a href="#admission"
+         onclick="selectCourse('DCA')"
+         class="btn">
+        Apply Now
+      </a>
+
+    </div>
+
+
+    <!-- CCC -->
+
+    <div class="course">
+
+      <div class="course-icon">📜</div>
+
+      <h3>CCC</h3>
+
+      <div class="fee">
+        ₹500 / Month
+      </div>
+
+      <div class="subjects" id="ccc">
+
+        <b>CCC Subjects:</b>
+
+        <br>• Computer Basics
+        <br>• Operating System
+        <br>• Word Processing
+        <br>• Spreadsheet
+        <br>• Presentation
+        <br>• Internet
+        <br>• Digital Services
+        <br>• Practical Practice
+
+      </div>
+
+      <button class="btn"
+              onclick="toggleSubjects('ccc')">
+        📚 View Subjects
+      </button>
+
+      <a href="#admission"
+         onclick="selectCourse('CCC')"
+         class="btn">
+        Apply Now
+      </a>
+
+    </div>
+
+
+    <!-- DTP -->
+
+    <div class="course">
+
+      <div class="course-icon">🎨</div>
+
+      <h3>DTP</h3>
+
+      <div class="fee">
+        Contact for Fee
+      </div>
+
+      <div class="subjects" id="dtp">
+
+        <b>DTP Subjects:</b>
+
+        <br>• DTP Concepts
+        <br>• Photoshop
+        <br>• CorelDRAW
+        <br>• Page Design
+        <br>• Printing Concepts
+        <br>• Practical Projects
+
+      </div>
+
+      <button class="btn"
+              onclick="toggleSubjects('dtp')">
+        📚 View Subjects
+      </button>
+
+      <a href="#admission"
+         onclick="selectCourse('DTP')"
+         class="btn">
+        Apply Now
+      </a>
+
+    </div>
+
+
+    <!-- TALLY -->
+
+    <div class="course">
+
+      <div class="course-icon">📊</div>
+
+      <h3>Tally Prime + GST</h3>
+
+      <div class="fee">
+        Contact for Fee
+      </div>
+
+      <div class="subjects" id="tally">
+
+        <b>Tally Subjects:</b>
+
+        <br>• Company Creation
+        <br>• Groups
+        <br>• Ledgers
+        <br>• Accounting Rules
+        <br>• Payment Voucher
+        <br>• Receipt Voucher
+        <br>• Contra
+        <br>• Journal
+        <br>• Inventory
+        <br>• GST
+        <br>• Reports
+        <br>• Practical Accounting
+
+      </div>
+
+      <button class="btn"
+              onclick="toggleSubjects('tally')">
+        📚 View Subjects
+      </button>
+
+      <a href="#admission"
+         onclick="selectCourse('Tally Prime + GST')"
+         class="btn">
+        Apply Now
+      </a>
+
+    </div>
+
+
+    <!-- MS OFFICE -->
+
+    <div class="course">
+
+      <div class="course-icon">📑</div>
+
+      <h3>MS Office</h3>
+
+      <div class="fee">
+        Contact for Fee
+      </div>
+
+      <div class="subjects" id="office">
+
+        <b>MS Office Subjects:</b>
+
+        <br>• MS Word
+        <br>• MS Excel
+        <br>• PowerPoint
+        <br>• Formatting
+        <br>• Tables
+        <br>• Mail Merge
+        <br>• Excel Formulas
+        <br>• Office Practical Work
+
+      </div>
+
+      <button class="btn"
+              onclick="toggleSubjects('office')">
+        📚 View Subjects
+      </button>
+
+      <a href="#admission"
+         onclick="selectCourse('MS Office')"
+         class="btn">
+        Apply Now
+      </a>
+
+    </div>
+
+
+    <!-- TYPING -->
+
+    <div class="course">
+
+      <div class="course-icon">⌨️</div>
+
+      <h3>Hindi & English Typing</h3>
+
+      <div class="fee">
+        Contact for Fee
+      </div>
+
+      <div class="subjects" id="typing">
+
+        <b>Typing Subjects:</b>
+
+        <br>• English Typing
+        <br>• Hindi Typing
+        <br>• Speed Practice
+        <br>• Accuracy Practice
+        <br>• Certificate
+
+      </div>
+
+      <button class="btn"
+              onclick="toggleSubjects('typing')">
+        📚 View Subjects
+      </button>
+
+      <a href="#admission"
+         onclick="selectCourse('Hindi & English Typing')"
+         class="btn">
+        Apply Now
+      </a>
+
+    </div>
+
+
+    <!-- AI -->
+
+    <div class="course">
+
+      <div class="course-icon">🤖</div>
+
+      <h3>AI + Web Designing</h3>
+
+      <div class="fee">
+        Contact for Fee
+      </div>
+
+      <div class="subjects" id="ai">
+
+        <b>AI + Web Designing:</b>
+
+        <br>• AI Tools Basics
+        <br>• HTML
+        <br>• CSS
+        <br>• JavaScript Basics
+        <br>• Website Design
+        <br>• Responsive Design
+        <br>• Practical Projects
+
+      </div>
+
+      <button class="btn"
+              onclick="toggleSubjects('ai')">
+        📚 View Subjects
+      </button>
+
+      <a href="#admission"
+         onclick="selectCourse('AI + Web Designing')"
+         class="btn">
+        Apply Now
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     COURSES
-========================= -->
-
-<section class="courses" id="courses">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Our Courses</h2>
-<p>अपने Career के अनुसार Course चुनें</p>
-</div>
-
-
-<div class="course-grid">
-
-
-<!-- ADCA -->
-
-<div class="course-card">
-
-<div class="course-icon">💻</div>
-
-<h3>ADCA</h3>
-
-<div class="price">₹400 / Month</div>
-
-<p>Advanced Diploma in Computer Applications</p>
-
-<div class="subjects" id="adcaSubjects">
-
-<ul>
-<li>Computer Fundamentals</li>
-<li>Notepad & WordPad</li>
-<li>MS Paint</li>
-<li>MS Word</li>
-<li>MS Excel</li>
-<li>PowerPoint</li>
-<li>Hindi & English Typing</li>
-<li>Internet & Email</li>
-<li>Tally Prime</li>
-<li>Web Designing</li>
-<li>Practical Projects</li>
-</ul>
-
-</div>
-
-<div class="course-buttons">
-
-<button class="btn btn-blue"
-onclick="toggleSubjects('adcaSubjects')">
-View Subjects
-</button>
-
-<button class="btn btn-green"
-onclick="applyCourse('ADCA')">
-Apply Now
-</button>
-
-</div>
-
-</div>
-
-
-<!-- DCA -->
-
-<div class="course-card">
-
-<div class="course-icon">🖥️</div>
-
-<h3>DCA</h3>
-
-<div class="price">₹500 / Month</div>
-
-<p>Diploma in Computer Applications</p>
-
-<div class="subjects" id="dcaSubjects">
-
-<ul>
-<li>Computer Fundamentals</li>
-<li>Windows</li>
-<li>MS Word</li>
-<li>MS Excel</li>
-<li>PowerPoint</li>
-<li>Internet</li>
-<li>Email</li>
-<li>Hindi & English Typing</li>
-<li>Practical Work</li>
-</ul>
-
-</div>
-
-<div class="course-buttons">
-
-<button class="btn btn-blue"
-onclick="toggleSubjects('dcaSubjects')">
-View Subjects
-</button>
-
-<button class="btn btn-green"
-onclick="applyCourse('DCA')">
-Apply Now
-</button>
-
-</div>
-
-</div>
-
-
-<!-- CCC -->
-
-<div class="course-card">
-
-<div class="course-icon">📘</div>
-
-<h3>CCC</h3>
-
-<div class="price">₹500 / Month</div>
-
-<p>Course on Computer Concepts</p>
-
-<div class="subjects" id="cccSubjects">
-
-<ul>
-<li>Computer Basics</li>
-<li>Operating System</li>
-<li>Word Processing</li>
-<li>Spreadsheet</li>
-<li>Presentation</li>
-<li>Internet</li>
-<li>Digital Services</li>
-<li>Practical Practice</li>
-</ul>
-
-</div>
-
-<div class="course-buttons">
-
-<button class="btn btn-blue"
-onclick="toggleSubjects('cccSubjects')">
-View Subjects
-</button>
-
-<button class="btn btn-green"
-onclick="applyCourse('CCC')">
-Apply Now
-</button>
-
-</div>
-
-</div>
-
-
-<!-- DTP -->
-
-<div class="course-card">
-
-<div class="course-icon">🎨</div>
-
-<h3>DTP</h3>
-
-<div class="price">Contact for Fee</div>
-
-<p>Desktop Publishing</p>
-
-<div class="subjects" id="dtpSubjects">
-
-<ul>
-<li>DTP Concepts</li>
-<li>Photoshop</li>
-<li>CorelDRAW</li>
-<li>Page Designing</li>
-<li>Printing Concepts</li>
-<li>Practical Projects</li>
-</ul>
-
-</div>
-
-<div class="course-buttons">
-
-<button class="btn btn-blue"
-onclick="toggleSubjects('dtpSubjects')">
-View Subjects
-</button>
-
-<button class="btn btn-green"
-onclick="applyCourse('DTP')">
-Apply Now
-</button>
-
-</div>
-
-</div>
-
-
-<!-- TALLY -->
-
-<div class="course-card">
-
-<div class="course-icon">📊</div>
-
-<h3>Tally Prime + GST</h3>
-
-<div class="price">Contact for Fee</div>
-
-<p>Accounting & GST Practical Training</p>
-
-<div class="subjects" id="tallySubjects">
-
-<ul>
-<li>Company Creation</li>
-<li>Groups & Ledgers</li>
-<li>Accounting Rules</li>
-<li>Payment Voucher</li>
-<li>Receipt Voucher</li>
-<li>Contra Voucher</li>
-<li>Journal Voucher</li>
-<li>Inventory</li>
-<li>GST</li>
-<li>Reports</li>
-<li>Practical Accounting</li>
-</ul>
-
-</div>
-
-<div class="course-buttons">
-
-<button class="btn btn-blue"
-onclick="toggleSubjects('tallySubjects')">
-View Subjects
-</button>
-
-<button class="btn btn-green"
-onclick="applyCourse('Tally Prime + GST')">
-Apply Now
-</button>
-
-</div>
-
-</div>
-
-
-<!-- MS OFFICE -->
-
-<div class="course-card">
-
-<div class="course-icon">📄</div>
-
-<h3>MS Office</h3>
-
-<div class="price">Contact for Fee</div>
-
-<p>Office & Computer Productivity Skills</p>
-
-<div class="subjects" id="officeSubjects">
-
-<ul>
-<li>MS Word</li>
-<li>MS Excel</li>
-<li>PowerPoint</li>
-<li>Formatting</li>
-<li>Tables</li>
-<li>Mail Merge</li>
-<li>Excel Formulas</li>
-<li>Office Practical Work</li>
-</ul>
-
-</div>
-
-<div class="course-buttons">
-
-<button class="btn btn-blue"
-onclick="toggleSubjects('officeSubjects')">
-View Subjects
-</button>
-
-<button class="btn btn-green"
-onclick="applyCourse('MS Office')">
-Apply Now
-</button>
-
-</div>
-
-</div>
-
-
-<!-- TYPING -->
-
-<div class="course-card">
-
-<div class="course-icon">⌨️</div>
-
-<h3>Hindi & English Typing</h3>
-
-<div class="price">Contact for Fee</div>
-
-<p>Speed & Accuracy Based Typing Training</p>
-
-<div class="subjects" id="typingSubjects">
-
-<ul>
-<li>English Typing</li>
-<li>Hindi Typing</li>
-<li>Speed Practice</li>
-<li>Accuracy Practice</li>
-<li>Typing Test</li>
-<li>Certificate</li>
-</ul>
-
-</div>
-
-<div class="course-buttons">
-
-<button class="btn btn-blue"
-onclick="toggleSubjects('typingSubjects')">
-View Subjects
-</button>
-
-<button class="btn btn-green"
-onclick="applyCourse('Hindi & English Typing')">
-Apply Now
-</button>
-
-</div>
-
-</div>
-
-
-<!-- AI -->
-
-<div class="course-card">
-
-<div class="course-icon">🤖</div>
-
-<h3>AI + Web Designing</h3>
-
-<div class="price">Contact for Fee</div>
-
-<p>Future Skills & Website Development</p>
-
-<div class="subjects" id="aiSubjects">
-
-<ul>
-<li>AI Tools Basics</li>
-<li>AI Practical Work</li>
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript Basics</li>
-<li>Website Designing</li>
-<li>Responsive Design</li>
-<li>Practical Projects</li>
-</ul>
-
-</div>
-
-<div class="course-buttons">
-
-<button class="btn btn-blue"
-onclick="toggleSubjects('aiSubjects')">
-View Subjects
-</button>
-
-<button class="btn btn-green"
-onclick="applyCourse('AI + Web Designing')">
-Apply Now
-</button>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     NOTES
-========================= -->
-
-<section class="notes" id="notes">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Notes & Study Material</h2>
-
-<p>
-Students के लिए Computer Notes और Study Material
-</p>
-
-</div>
-
-
-<div class="note-grid">
-
-<div class="note-card">
-
-<h3>📘 Computer Fundamentals</h3>
-
-<p>
-Computer Basics, Hardware, Software, CPU,
-Memory, Input-Output Devices आदि।
-</p>
-
-<br>
-
-<button class="btn btn-blue"
-onclick="showMessage('Computer Fundamentals Notes जल्द उपलब्ध होंगे।')">
-Download Notes
-</button>
-
-</div>
-
-
-<div class="note-card">
-
-<h3>📗 MS Word Notes</h3>
-
-<p>
-Home, Insert, Design, Layout, References,
-Mailings और Review Tab की जानकारी।
-</p>
-
-<br>
-
-<button class="btn btn-blue"
-onclick="showMessage('MS Word Notes जल्द उपलब्ध होंगे।')">
-Download Notes
-</button>
-
-</div>
-
-
-<div class="note-card">
-
-<h3>📙 MS Excel Notes</h3>
-
-<p>
-Formulas, Functions, Tables, Charts,
-Data Entry और Practical Excel Work।
-</p>
-
-<br>
-
-<button class="btn btn-blue"
-onclick="showMessage('MS Excel Notes जल्द उपलब्ध होंगे।')">
-Download Notes
-</button>
-
-</div>
-
-
-<div class="note-card">
-
-<h3>📕 Tally Prime Notes</h3>
-
-<p>
-Accounting, Ledger, Voucher, GST,
-Inventory और Reports।
-</p>
-
-<br>
-
-<button class="btn btn-blue"
-onclick="showMessage('Tally Notes जल्द उपलब्ध होंगे।')">
-Download Notes
-</button>
-
-</div>
-
-
-<div class="note-card">
-
-<h3>📒 CCC Notes</h3>
-
-<p>
-CCC examination के लिए Computer Concepts
-और practical study material।
-</p>
-
-<br>
-
-<button class="btn btn-blue"
-onclick="showMessage('CCC Notes जल्द उपलब्ध होंगे।')">
-Download Notes
-</button>
-
-</div>
-
-
-<div class="note-card">
-
-<h3>📓 Typing Practice</h3>
-
-<p>
-Hindi और English typing speed एवं accuracy
-बढ़ाने के लिए practice material।
-</p>
-
-<br>
-
-<button class="btn btn-blue"
-onclick="showMessage('Typing Practice Material जल्द उपलब्ध होगा।')">
-Open Material
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     WHY COMPUTER
-========================= -->
-
-<section class="why" id="why">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>कंप्यूटर क्यों सीखना चाहिए?</h2>
-
-<p>
-आज के Digital समय में Computer Skill बहुत महत्वपूर्ण है
-</p>
-
-</div>
-
-
-<div class="why-grid">
-
-<div class="why-card">
-<div class="icon">💼</div>
-<h3>Job के लिए</h3>
-<p>
-अधिकांश private और office jobs में
-Computer knowledge उपयोगी होती है।
-</p>
-</div>
-
-
-<div class="why-card">
-<div class="icon">📈</div>
-<h3>Career Growth</h3>
-<p>
-Computer skill आपके career में
-नई opportunities समझने में मदद करती है।
-</p>
-</div>
-
-
-<div class="why-card">
-<div class="icon">🏦</div>
-<h3>Office & Banking</h3>
-<p>
-Data entry, reports, Excel और
-digital office work के लिए उपयोगी।
-</p>
-</div>
-
-
-<div class="why-card">
-<div class="icon">🌐</div>
-<h3>Digital World</h3>
-<p>
-Internet, Email, Online Services और
-Digital Payments को आसानी से समझें।
-</p>
-</div>
-
-
-<div class="why-card">
-<div class="icon">🤖</div>
-<h3>Future Skills</h3>
-<p>
-AI, Web Designing और नई technologies
-के लिए Computer basics मजबूत करें।
-</p>
-</div>
-
-
-<div class="why-card">
-<div class="icon">⭐</div>
-<h3>Confidence</h3>
-<p>
-Practical Computer knowledge से
-अपने काम में आत्मविश्वास बढ़ाएँ।
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     NOTICE
-========================= -->
-
-<section class="notice" id="notice">
-
-<div class="container">
-
-<div class="section-title">
-<h2>Latest Notice</h2>
-<p>Academy की महत्वपूर्ण सूचनाएँ</p>
-</div>
-
-<div class="notice-box">
-
-<ul>
-
-<li>
-<strong>Admission Open 2026–27:</strong>
-सभी प्रमुख Computer Courses में Admission शुरू है।
-</li>
-
-<li>
-ADCA, DCA और CCC के लिए Online Admission उपलब्ध है।
-</li>
-
-<li>
-सभी Students अपनी monthly fee समय पर जमा करें।
-</li>
-
-<li>
-Class timing और छुट्टी से संबंधित सूचना Academy द्वारा
-समय-समय पर दी जाएगी।
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     ONLINE ADMISSION
-========================= -->
-
-<section class="admission" id="admission">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Online Admission Form</h2>
-
-<p>
-नीचे अपना सही विवरण भरकर Admission के लिए आवेदन करें
-</p>
-
-</div>
-
-
-<div class="form-box">
-
-<form id="admissionForm">
-
-
-<div class="form-grid">
-
-
-<div class="form-group">
-
-<label>Student Name *</label>
-
-<input
-type="text"
-id="studentName"
-placeholder="Enter Student Name"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Father's Name *</label>
-
-<input
-type="text"
-id="fatherName"
-placeholder="Enter Father's Name"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Mother's Name</label>
-
-<input
-type="text"
-id="motherName"
-placeholder="Enter Mother's Name">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Date of Birth *</label>
-
-<input
-type="date"
-id="dob"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Gender *</label>
-
-<select id="gender" required>
-
-<option value="">Select Gender</option>
-<option>Male</option>
-<option>Female</option>
-<option>Other</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Mobile Number *</label>
-
-<input
-type="tel"
-id="mobile"
-placeholder="10 Digit Mobile Number"
-pattern="[0-9]{10}"
-required>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Email</label>
-
-<input
-type="email"
-id="email"
-placeholder="Enter Email">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Qualification *</label>
-
-<select id="qualification" required>
-
-<option value="">Select Qualification</option>
-<option>8th Pass</option>
-<option>9th Pass</option>
-<option>10th Pass</option>
-<option>12th Pass</option>
-<option>Graduate</option>
-<option>Post Graduate</option>
-<option>Other</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>Select Course *</label>
-
-<select id="course" required>
-
-<option value="">Select Course</option>
-<option>ADCA</option>
-<option>DCA</option>
-<option>CCC</option>
-<option>DTP</option>
-<option>Tally Prime + GST</option>
-<option>MS Office</option>
-<option>Hindi & English Typing</option>
-<option>AI + Web Designing</option>
-
-</select>
-
-</div>
-
-
-<div class="form-group">
-
-<label>School / College</label>
-
-<input
-type="text"
-id="school"
-placeholder="School / College Name">
-
-</div>
-
-
-<div class="form-group">
-
-<label>Village / City *</label>
-
-<input
-type="text"
-id="city"
-placeholder="Village / City"
-required>
-
-</div>
-
-
-<div class="form-group full">
-
-<label>Full Address *</label>
-
-<textarea
-id="address"
-placeholder="Enter Full Address"
-required></textarea>
-
-</div>
-
-
-</div>
-
-
-<div class="declaration">
-
-<label>
-
-<input type="checkbox" id="declaration" required>
-
-मैं घोषणा करता/करती हूँ कि ऊपर दी गई जानकारी
-मेरी जानकारी के अनुसार सही है।
-
-</label>
-
-</div>
-
-
-<button
-type="submit"
-class="btn btn-green">
-
-📝 Submit Admission Form
-
-</button>
-
-
-<div id="formMessage"
-style="margin-top:15px;font-weight:bold;">
-</div>
-
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     RESULTS
-========================= -->
-
-<section class="results" id="results">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Check Your Result</h2>
-
-<p>
-Application / Roll Number डालकर Result देखें
-</p>
-
-</div>
-
-
-<div class="result-box">
-
-<input
-type="text"
-id="resultRoll"
-placeholder="Enter Roll / Application Number">
-
-<button
-class="btn btn-blue"
-onclick="checkResult()">
-
-🔎 Check Result
-
-</button>
-
-<div id="resultMessage"
-style="margin-top:20px;">
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CERTIFICATE
-========================= -->
-
-<section class="certificate" id="certificate">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Certificate Verification</h2>
-
-<p>
-Certificate Number डालकर certificate verify करें
-</p>
-
-</div>
-
-
-<div class="verify-box">
-
-<input
-type="text"
-id="certificateNo"
-placeholder="Enter Certificate Number">
-
-<button
-class="btn btn-green"
-onclick="verifyCertificate()">
-
-📜 Verify Certificate
-
-</button>
-
-<div id="certificateMessage"
-style="margin-top:20px;">
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     GALLERY
-========================= -->
-
-<section class="gallery" id="gallery">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Academy Gallery</h2>
-
-<p>
-हमारी Computer Lab और Academy Activities
-</p>
-
-</div>
-
-
-<div class="gallery-grid">
-
-<div class="gallery-item">
-🖥️<br>Computer Lab
-</div>
-
-<div class="gallery-item">
-👨‍💻<br>Practical Class
-</div>
-
-<div class="gallery-item">
-📚<br>Study Material
-</div>
-
-<div class="gallery-item">
-🎓<br>Student Activities
-</div>
-
-<div class="gallery-item">
-⌨️<br>Typing Practice
-</div>
-
-<div class="gallery-item">
-📊<br>Excel Practical
-</div>
-
-<div class="gallery-item">
-💻<br>Computer Training
-</div>
-
-<div class="gallery-item">
-🏆<br>Achievement
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     THOUGHTS
-========================= -->
-
-<section class="thoughts" id="thoughts">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>10 प्रेरणादायक विचार</h2>
-
-<p>
-हर दिन कुछ नया सीखें
-</p>
-
-</div>
-
-
-<div class="thought-grid">
-
-<div class="thought">
-1️⃣ सफलता की शुरुआत सीखने की इच्छा से होती है।
-</div>
-
-<div class="thought">
-2️⃣ आज का छोटा प्रयास, कल की बड़ी उपलब्धि बन सकता है।
-</div>
-
-<div class="thought">
-3️⃣ ज्ञान जितना बाँटेंगे, उतना ही बढ़ेगा।
-</div>
-
-<div class="thought">
-4️⃣ सीखना कभी बंद मत कीजिए, क्योंकि दुनिया हमेशा बदल रही है।
-</div>
-
-<div class="thought">
-5️⃣ मेहनत का कोई shortcut नहीं, लेकिन सही दिशा जरूर होती है।
-</div>
-
-<div class="thought">
-6️⃣ समय का सही उपयोग ही सफलता की मजबूत नींव है।
-</div>
-
-<div class="thought">
-7️⃣ गलती सीखने का अंत नहीं, सीखने का एक हिस्सा है।
-</div>
-
-<div class="thought">
-8️⃣ अपने हुनर को पहचानिए और उसे रोज थोड़ा बेहतर बनाइए।
-</div>
-
-<div class="thought">
-9️⃣ Computer सीखिए, digital दुनिया को समझिए और अपने अवसर बढ़ाइए।
-</div>
-
-<div class="thought">
-🔟 आज सीखिए, कल आत्मविश्वास के साथ आगे बढ़िए।
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section class="contact" id="contact">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>Contact Us</h2>
-
-<p>
-Admission और Course की जानकारी के लिए संपर्क करें
-</p>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-<h3>📞 Call Us</h3>
-
-<p>
-<a href="tel:9305066046">
-9305066046
-</a>
-</p>
-
-<p>
-<a href="tel:9506793790">
-9506793790
-</a>
-</p>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>💬 WhatsApp</h3>
-
-<p>
-<a href="https://wa.me/919305066046">
-WhatsApp: 9305066046
-</a>
-</p>
-
-<p>
-<a href="https://wa.me/919506793790">
-WhatsApp: 9506793790
-</a>
-</p>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>📧 Email</h3>
-
-<p>
-<a href="mailto:adityacomputeracdemy@gmail.com">
-adityacomputeracdemy@gmail.com
-</a>
-</p>
-
-</div>
-
-
-</div>
-
-
-<br><br>
-
-<div class="contact-card">
-
-<h3>📍 Academy Address</h3>
-
-<p>
-<strong>ADITYA COMPUTER ACADEMY</strong>
-</p>
-
-<p>
-Kandwa Panchkoshi Road, 221106
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-<div class="container">
-
-<div class="footer-grid">
-
-
-<div>
-
-<h3>ADITYA COMPUTER ACADEMY</h3>
-
-<p>
-Computer Education & Skill Development Centre
-</p>
-
-<p>
-Director: <strong>Aditya Kashyap</strong>
-</p>
-
-<br>
-
-<p>
-कम फीस में बेहतर Computer Education,
-Practical Training और Career Skills।
-</p>
-
-</div>
-
-
-<div>
-
-<h3>Quick Links</h3>
-
-<a href="#home">Home</a>
-<a href="#about">About Us</a>
-<a href="#courses">Courses</a>
-<a href="#notes">Notes</a>
-<a href="#admission">Admission</a>
-<a href="#results">Results</a>
-
-</div>
-
-
-<div>
-
-<h3>Important</h3>
-
-<a href="#notice">Notice</a>
-<a href="#certificate">Certificate Verification</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
-<a href="admin.html">Admin Login</a>
-
-</div>
-
-
-</div>
-
-
-<div class="footer-bottom">
-
-© 2026 ADITYA COMPUTER ACADEMY. All Rights Reserved.
-
-<br>
-
-📧 adityacomputeracdemy@gmail.com
-
-</div>
-
-</div>
-
-</footer>
-
-
-<!-- =========================
-     FLOATING WHATSAPP
-========================= -->
-
-<a
-class="whatsapp"
-href="https://wa.me/919305066046"
-target="_blank"
-title="Chat on WhatsApp">
-
-💬
-
-</a>
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-
-/* MENU */
-
-function toggleMenu(){
-
-    document
-    .getElementById("navMenu")
-    .classList
-    .toggle("active");
-
-}
-
-
-/* SUBJECTS */
-
-function toggleSubjects(id){
-
-    const box = document.getElementById(id);
-
-    if(box.style.display === "block"){
-
-        box.style.display = "none";
-
-    }else{
-
-        box.style.display = "block";
-
-    }
-
-}
-
-
-/* APPLY COURSE */
-
-function applyCourse(courseName){
-
-    document.getElementById("course").value = courseName;
-
-    document
-    .getElementById("admission")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
-}
-
-
-/* MESSAGE */
-
-function showMessage(message){
-
-    alert(message);
-
-}
-
-
-/* ADMISSION FORM */
-
-document
-.getElementById("admissionForm")
-.addEventListener("submit", function(event){
-
-    event.preventDefault();
-
-    const name =
-    document.getElementById("studentName").value;
-
-    const course =
-    document.getElementById("course").value;
-
-    const mobile =
-    document.getElementById("mobile").value;
-
-    if(!name || !course || !mobile){
-
-        alert("कृपया सभी जरूरी जानकारी भरें।");
-
-        return;
-
-    }
-
-    /*
-       अभी demo submission है।
-
-       बाद में Firebase Database से connect
-       करके Application Number generate
-       और Admin Panel में data save किया जाएगा।
-    */
-
-    const applicationNo =
-    "ACA" + Date.now().toString().slice(-6);
-
-    document
-    .getElementById("formMessage")
-    .innerHTML =
-    "✅ आपका आवेदन सफलतापूर्वक प्राप्त हुआ।<br>" +
-    "Application Number: <strong>" +
-    applicationNo +
-    "</strong><br>" +
-    "इसे सुरक्षित रखें।";
-
-    document
-    .getElementById("formMessage")
-    .style.color = "#15803d";
-
-    this.reset();
-
-});
-
-
-/* RESULT */
-
-function checkResult(){
-
-    const roll =
-    document.getElementById("resultRoll").value.trim();
-
-    const message =
-    document.getElementById("resultMessage");
-
-    if(!roll){
-
-        message.innerHTML =
-        "⚠️ कृपया Roll / Application Number डालें।";
-
-        return;
-
-    }
-
-    message.innerHTML =
-    "ℹ️ Result database से connect होने के बाद यहाँ result दिखाई देगा।";
-
-}
-
-
-/* CERTIFICATE */
-
-function verifyCertificate(){
-
-    const number =
-    document
-    .getElementById("certificateNo")
-    .value
-    .trim();
-
-    const message =
-    document.getElementById("certificateMessage");
-
-    if(!number){
-
-        message.innerHTML =
-        "⚠️ कृपया Certificate Number डालें।";
-
-        return;
-
-    }
-
-    message.innerHTML =
-    "ℹ️ Certificate verification database से connect होने के बाद यहाँ verification result दिखाई देगा।";
-
-}
-
-
-/* CLOSE MOBILE MENU */
-
-document
-.querySelectorAll(".nav-menu a")
-.forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        document
-        .getElementById("navMenu")
-        .classList
-        .remove("active");
-
-    });
-
-});
-
-<script type="module">
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
-
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  serverTimestamp
-} from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
-
-
-/* Firebase Configuration */
-const firebaseConfig = {
-  apiKey: "AIzaSyDbNxgO61_y_nM5GMJvyICYlbBCwev-QGXI",
-  authDomain: "aditya-computer-academy.firebaseapp.com",
-  projectId: "aditya-computer-academy",
-  storageBucket: "aditya-computer-academy.firebasestorage.app",
-  messagingSenderId: "679070166871",
-  appId: "1:679070166871:web:fe584ad746e57b33e8d812",
-  measurementId: "G-9YSTLW5PSV"
-};
-
-
-/* Firebase Start */
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-
-/* Mobile Menu */
-document
-.querySelectorAll(".nav-menu a")
-.forEach(function(link){
-
-    link.addEventListener("click",function(){
-
-        document
-        .getElementById("navMenu")
-        .classList
-        .remove("active");
-
-    });
-
-});
-
-
-/* Admission Form */
-const admissionForm = document.getElementById("admissionForm");
-const formMessage = document.getElementById("formMessage");
-
-if (admissionForm) {
-
-    admissionForm.addEventListener("submit", async function(e) {
-
-        e.preventDefault();
-
-        const submitBtn = admissionForm.querySelector(
-            'button[type="submit"]'
-        );
-
-        submitBtn.disabled = true;
-        submitBtn.innerText = "Submitting...";
-
-
-        const admissionData = {
-
-            studentName:
-                document.getElementById("studentName").value.trim(),
-
-            fatherName:
-                document.getElementById("fatherName").value.trim(),
-
-            motherName:
-                document.getElementById("motherName").value.trim(),
-
-            dob:
-                document.getElementById("dob").value,
-
-            gender:
-                document.getElementById("gender").value,
-
-            mobile:
-                document.getElementById("mobile").value.trim(),
-
-      
+<!-- ================= WHY COMPUTER ================= -->
+
+<section id="why" class="why-section">
+
+  <div class="section-title">
+
+    <span>WHY COMPUTER?</span>
+
+    <h2>
+      कंप्यूटर क्यों सीखना चाहिए?
+    </h2>
+
+  </div>
+
+  <div class="why">
+
+    <div class="why-card">
+      <div class="icon">💼</div>
+      <h3>रोजगार के लिए</h3>
+      <p>
+        आज अधिकांश office, banking, business और private jobs
+        में computer knowledge उपयोगी है।
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">📈</div>
+      <h3>Career Growth</h3>
+      <p>
+        Computer skills से काम करने की क्षमता बढ़ती है
+        और नए career options समझने में मदद मिलती है।
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon">🏦</div>
+      <h3>Office & Banking</h3>
+      <p>
+        Documents, Excel reports, email और online services
+        में computer skills बहुत उपयोगी होती हैं।
+      </p>
+    </div>
+
+    <div class="why-card">
+      <div class
