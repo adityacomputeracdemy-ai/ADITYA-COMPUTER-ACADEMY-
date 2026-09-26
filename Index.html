@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aditya Computer Academy | Varanasi</title>
+
+<style>
+:root{
+  --blue:#1267c9;
+  --sky:#eaf6ff;
+  --dark:#062957;
+  --green:#16a66a;
+  --text:#17233c;
+  --muted:#667085;
+  --white:#fff;
+  --border:#dfebf5;
+  --shadow:0 12px 35px rgba(0,50,100,.10);
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f7fbff;
+  color:var(--text);
+}
+
+a{text-decoration:none;color:inherit}
+
+button,input,select,textarea{font:inherit}
+
+/* TOP BAR */
+.topbar{
+  background:var(--dark);
+  color:white;
+  padding:8px 5%;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  font-size:13px;
+}
+
+.topbar a{color:white}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:10px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:bold;
+  color:var(--dark);
+}
+
+.logo img{
+  width:55px;
+  height:55px;
+  object-fit:contain;
+  border-radius:10px;
+}
+
+.logo-name{
+  font-size:18px;
+}
+
+.logo-sub{
+  color:var(--blue);
+  font-size:10px;
+  letter-spacing:2px;
+  display:block;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.nav-links a{
+  font-weight:bold;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:var(--blue);
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:var(--sky);
+  border-radius:9px;
+  padding:10px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  padding:70px 5%;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+  background:
+  linear-gradient(135deg,#eaf7ff,#fff 55%,#edfff7);
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:30px;
+  background:#dff2ff;
+  color:#075ea8;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.hero h1{
+  font-size:clamp(38px,5vw,65px);
+  line-height:1.02;
+  margin:18px 0;
+  color:var(--dark);
+}
+
+.hero h1 span{color:var(--blue)}
+
+.hero p{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.7;
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:25px 0;
+}
+
+.btn{
+  border:0;
+  border-radius:11px;
+  padding:12px 17px;
+  font-weight:bold;
+  cursor:pointer;
+  display:inline-block;
+}
+
+.btn-blue{
+  background:var(--blue);
+  color:white;
+}
+
+.btn-green{
+  background:var(--green);
+  color:white;
+}
+
+.btn-light{
+  background:white;
+  border:1px solid var(--border);
+  color:var(--dark);
+}
+
+.hero-logo{
+  background:white;
+  border-radius:28px;
+  padding:30px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.hero-logo img{
+  max-width:100%;
+  width:420px;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  background:white;
+  padding:22px 5%;
+}
+
+.stat{
+  border:1px solid var(--border);
+  border-radius:16px;
+  text-align:center;
+  padding:18px;
+}
+
+.stat strong{
+  display:block;
+  color:var(--blue);
+  font-size:28px;
+}
+
+/* SECTIONS */
+.section{
+  padding:70px 5%;
+}
+
+.section-title{
+  text-align:center;
+  color:var(--dark);
+  font-size:35px;
+  margin:0 0 10px;
+}
+
+.section-text{
+  max-width:750px;
+  text-align:center;
+  color:var(--muted);
+  margin:0 auto 35px;
+  line-height:1.7;
+}
+
+/* CARDS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:23px;
+  box-shadow:0 7px 25px rgba(0,50,100,.06);
+}
+
+.card h3{
+  color:var(--dark);
+  margin-top:10px;
+}
+
+.card p{
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.pill{
+  display:inline-block;
+  padding:6px 10px;
+  background:#eaf6ff;
+  color:var(--blue);
+  border-radius:8px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.subjects{
+  display:none;
+  border-top:1px solid var(--border);
+  margin-top:15px;
+  padding-top:10px;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+.subjects.show{display:block}
+
+/* GALLERY */
+.gallery-section{
+  background:linear-gradient(180deg,#f0f8ff,#fff);
+}
+
+.gallery-admin{
+  max-width:900px;
+  margin:0 auto 30px;
+  background:white;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.gallery-item{
+  position:relative;
+  height:220px;
+  overflow:hidden;
+  border-radius:16px;
+  background:#eaf3f9;
+  cursor:pointer;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.3s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.07);
+}
+
+.delete-photo{
+  position:absolute;
+  top:8px;
+  right:8px;
+  background:#d92727;
+  color:white;
+  border:0;
+  border-radius:8px;
+  padding:7px 9px;
+  cursor:pointer;
+  display:none;
+}
+
+.gallery-admin-mode .delete-photo{
+  display:block;
+}
+
+.empty-gallery{
+  text-align:center;
+  padding:50px;
+  color:var(--muted);
+  background:white;
+  border-radius:18px;
+  border:1px dashed #bdd4e5;
+}
+
+/* FORMS */
+.portal{
+  background:#f0f8ff;
+}
+
+.panel{
+  max-width:950px;
+  margin:auto;
+  background:white;
+  border-radius:22px;
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+.field label{
+  font-size:13px;
+  font-weight:bold;
+}
+
+.field input,
+.field select,
+.field textarea{
+  padding:12px;
+  border:1px solid #d8e5ef;
+  border-radius:10px;
+  outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px #e5f3ff;
+}
+
+.success{
+  margin-top:15px;
+  padding:15px;
+  background:#e9fff5;
+  color:#087b4e;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+.hidden{display:none!important}
+
+/* TABS */
+.tabs{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.tab{
+  border:1px solid var(--border);
+  background:white;
+  padding:11px 15px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.tab.active{
+  background:var(--blue);
+  color:white;
+}
+
+/* TABLE */
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  border-bottom:1px solid var(--border);
+  padding:10px;
+  text-align:left;
+}
+
+/* NOTES */
+.note{
+  background:#f4fbff;
+  border-left:4px solid var(--blue);
+  padding:15px;
+  border-radius:10px;
+  color:#536173;
+  line-height:1.7;
+}
+
+/* CONTACT */
+.contact-card{
+  text-align:center;
+}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:#dce8f7;
+  padding:45px 5% 20px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;
+  gap:30px;
+}
+
+footer h3{color:white}
+
+footer a{
+  display:block;
+  margin:8px 0;
+}
+
+.footer-logo{
+  width:110px;
+  background:white;
+  border-radius:15px;
+  padding:6px;
+}
+
+.copyright{
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.15);
+  margin-top:30px;
+  padding-top:18px;
+  font-size:13px;
+}
+
+/* FLOATING BUTTONS */
+.float-buttons{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:90;
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+}
+
+.float-buttons a{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:white;
+  font-size:22px;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.whatsapp{background:#16a66a}
+.phone{background:var(--blue)}
+
+/* MODAL */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,20,50,.7);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:200;
+}
+
+.modal.show{display:flex}
+
+.modal-box{
+  background:white;
+  width:100%;
+  max-width:750px;
+  max-height:90vh;
+  overflow:auto;
+  border-radius:20px;
+  padding:25px;
+  position:relative;
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:12px;
+  width:35px;
+  height:35px;
+  border:0;
+  border-radius:50%;
+  background:#edf5fb;
+  cursor:pointer;
+  font-size:20px;
+}
+
+/* CERTIFICATE */
+.certificate{
+  border:8px double var(--dark);
+  padding:35px;
+  text-align:center;
+}
+
+.certificate img{
+  width:100px;
+}
+
+.certificate h1{
+  color:var(--dark);
+  font-size:38px;
+}
+
+.certificate h2{
+  color:var(--blue);
+}
+
+/* TOAST */
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,100px);
+  background:#102a43;
+  color:white;
+  padding:13px 18px;
+  border-radius:10px;
+  z-index:300;
+  transition:.3s;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.hero{
+  grid-template-columns:1fr;
+}
+
+.grid{
+  grid-template-columns:1fr 1fr;
+}
+
+.gallery-grid{
+  grid-template-columns:1fr 1fr;
+}
+
+.stats{
+  grid-template-columns:1fr 1fr;
+}
+
+.footer-grid{
+  grid-template-columns:1fr 1fr;
+}
+
+.nav-links{
+  display:none;
+  position:absolute;
+  top:75px;
+  left:0;
+  right:0;
+  background:white;
+  padding:20px 5%;
+  flex-direction:column;
+  align-items:flex-start;
+  box-shadow:var(--shadow);
+}
+
+.nav-links.open{
+  display:flex;
+}
+
+.menu-btn{
+  display:block;
+}
+
+}
+
+@media(max-width:600px){
+
+.grid,
+.form-grid,
+.gallery-grid,
+.footer-grid{
+  grid-template-columns:1fr;
+}
+
+.full{
+  grid-column:auto;
+}
+
+.hero{
+  padding:45px 4%;
+}
+
+.section{
+  padding:50px 4%;
+}
+
+.gallery-item{
+  height:240px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+
+<div class="topbar">
+
+<span>
+📍 Kandwa Panchkosi Road, Varanasi - 221106
+</span>
+
+<span>
+
+📞
+<a href="tel:9305066046">
+9305066046
+</a>
+
+&nbsp; | &nbsp;
+
+📸
+<a
+href="https://www.instagram.com/adityacomputeracademy?stkn=dGVsMTVxcXZ2eTFo"
+target="_blank">
+Instagram
+</a>
+
+</span>
+
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+<a href="#home" class="logo">
+
+<!-- YOUR LOGO -->
+
+<img src="logo.jpg" alt="Aditya Computer Academy Logo">
+
+<div class="logo-name">
+
+ADITYA
+
+<span class="logo-sub">
+COMPUTER ACADEMY
+</span>
+
+</div>
+
+</a>
+
+
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
+
+
+<div class="nav-links" id="navLinks">
+
+<a href="#home">Home</a>
+
+<a href="#courses">Courses</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#admission">Admission</a>
+
+<a href="#portal">Student Portal</a>
+
+<a href="#notes">Notes</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div>
+
+<span class="badge">
+🎓 Admission Open • Practical Computer Education
+</span>
+
+<h1>
+
+Learn.
+<span>Grow.</span>
+Succeed.
+
+</h1>
+
+<p>
+
+Aditya Computer Academy में Computer,
+MS Office, Tally, Typing, DTP, Web Design
+और Digital Skills practical तरीके से सीखें।
+
+</p>
+
+<div class="buttons">
+
+<a href="#courses" class="btn btn-blue">
+📚 Explore Courses
+</a>
+
+<a
+href="https://wa.me/919305066046?text=Hello%20Aditya%20Computer%20Academy%2C%20mujhe%20course%20details%20chahiye."
+target="_blank"
+class="btn btn-green">
+
+💬 WhatsApp
+
+</a>
+
+<a href="#admission" class="btn btn-light">
+📝 Apply Online
+</a>
+
+</div>
+
+<div class="note">
+
+भारत सरकार द्वारा मान्यता प्राप्त
+
+<br>
+
+ISO Certified 9001:2015 Institute
+
+</div>
+
+</div>
+
+
+<div class="hero-logo">
+
+<!-- YOUR LOGO AGAIN -->
+
+<img
+src="logo.jpg"
+alt="Aditya Computer Academy">
+
+</div>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<div class="stats">
+
+<div class="stat">
+<strong>10+</strong>
+Courses
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+Practical Focus
+</div>
+
+<div class="stat">
+<strong>2</strong>
+Languages
+</div>
+
+<div class="stat">
+<strong>24×7</strong>
+Student Portal
+</div>
+
+</div>
+
+
+<!-- ================= COURSES ================= -->
+
+<section class="section" id="courses">
+
+<h2 class="section-title">
+Our Courses
+</h2>
+
+<p class="section-text">
+अपने पसंदीदा course के subjects देखें और वहीं से
+online admission form खोलें।
+</p>
+
+<div class="grid" id="courseGrid"></div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="section gallery-section" id="gallery">
+
+<h2 class="section-title">
+📸 Our Gallery
+</h2>
+
+<p class="section-text">
+
+यहाँ Academy की classroom, students, computer lab,
+events और activities की photos दिखाई देंगी।
+
+</p>
+
+
+<!-- ADMIN GALLERY PANEL -->
+
+<div
+class="gallery-admin hidden"
+id="galleryAdmin">
+
+<h3>
+📷 Gallery Manager
+</h3>
+
+<p>
+नीचे से अपनी coaching की photos select करें।
+एक साथ कई photos upload कर सकते हैं।
+</p>
+
+<input
+type="file"
+id="galleryInput"
+accept="image/*"
+multiple
+>
+
+<br><br>
+
+<button
+class="btn btn-light"
+onclick="clearGallery()">
+
+Delete All Gallery Photos
+
+</button>
+
+</div>
+
+
+<div id="galleryGrid" class="gallery-grid">
+</div>
+
+<div id="emptyGallery"
+class="empty-gallery">
+
+📷 अभी Gallery में कोई photo नहीं है।
+
+<br><br>
+
+Admin Login करने के बाद
+Gallery Manager से photos add करें।
+
+</div>
+
+</section>
+
+
+<!-- ================= ADMISSION ================= -->
+
+<section class="section portal" id="admission">
+
+<h2 class="section-title">
+📝 Online Admission
+</h2>
+
+<p class="section-text">
+नीचे form भरकर admission request submit करें।
+</p>
+
+<div class="panel">
+
+<form id="admissionForm" class="form-grid">
+
+<div class="field">
+
+<label>
+Student Name *
+</label>
+
+<input id="studentName" required>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Mobile Number *
+</label>
+
+<input
+id="studentPhone"
+maxlength="10"
+pattern="[0-9]{10}"
+required>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Email
+</label>
+
+<input
+id="studentEmail"
+type="email">
+
+</div>
+
+
+<div class="field">
+
+<label>
+Course *
+</label>
+
+<select id="studentCourse" required>
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+Father / Guardian Name
+</label>
+
+<input id="fatherName">
+
+</div>
+
+
+<div class="field">
+
+<label>
+Qualification
+</label>
+
+<input id="qualification">
+
+</div>
+
+
+<div class="field full">
+
+<label>
+Address
+</label>
+
+<textarea id="studentAddress" rows="3"></textarea>
+
+</div>
+
+
+<div class="field full">
+
+<button class="btn btn-blue">
+Submit Admission Form
+</button>
+
+</div>
+
+</form>
+
+
+<div id="admissionSuccess" class="success hidden">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STUDENT PORTAL ================= -->
+
+<section class="section" id="portal">
+
+<h2 class="section-title">
+🎓 Student & Admin Portal
+</h2>
+
+<p class="section-text">
+Student login, Admin panel, Certificate और Marksheet।
+</p>
+
+
+<div class="tabs">
+
+<button
+class="tab active"
+onclick="showPanel('studentPanel',this)">
+
+🎓 Student Login
+
+</button>
+
+
+<button
+class="tab"
+onclick="showPanel('adminPanel',this)">
+
+🔐 Admin Login
+
+</button>
+
+
+<button
+class="tab"
+onclick="showPanel('certificatePanel',this)">
+
+📜 Certificate
+
+</button>
+
+
+<button
+class="tab"
+onclick="showPanel('marksheetPanel',this)">
+
+📊 Marksheet
+
+</button>
+
+</div>
+
+
+<!-- STUDENT -->
+
+<div class="panel" id="studentPanel">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label>
+Student ID
+</label>
+
+<input
+id="loginId"
+placeholder="ACA1001">
+
+</div>
+
+
+<div class="field">
+
+<label>
+Mobile
+</label>
+
+<input
+id="loginMobile"
+placeholder="10 digit mobile">
+
+</div>
+
+
+<div class="field full">
+
+<button
+class="btn btn-blue"
+onclick="studentLogin()">
+
+Login / View Details
+
+</button>
+
+</div>
+
+</div>
+
+
+<div id="studentResult"></div>
+
+</div>
+
+
+<!-- ADMIN -->
+
+<div class="panel hidden" id="adminPanel">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label>
+Username
+</label>
+
+<input id="adminUsername">
+
+</div>
+
+
+<div class="field">
+
+<label>
+Password
+</label>
+
+<input
+id="adminPassword"
+type="password">
+
+</div>
+
+
+<div class="field full">
+
+<button
+class="btn btn-blue"
+onclick="adminLogin()">
+
+Admin Login
+
+</button>
+
+</div>
+
+</div>
+
+
+<div id="adminResult"></div>
+
+</div>
+
+
+<!-- CERTIFICATE -->
+
+<div class="panel hidden" id="certificatePanel">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label>
+Student ID / Certificate Number
+</label>
+
+<input
+id="certificateId"
+placeholder="ACA1001">
+
+</div>
+
+
+<div class="field full">
+
+<button
+class="btn btn-blue"
+onclick="makeDocument('certificate')">
+
+View Certificate
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MARKSHEET -->
+
+<div class="panel hidden" id="marksheetPanel">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label>
+Student ID
+</label>
+
+<input
+id="marksheetId"
+placeholder="ACA1001">
+
+</div>
+
+
+<div class="field full">
+
+<button
+class="btn btn-blue"
+onclick="makeDocument('marksheet')">
+
+View Marksheet
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= NOTES ================= -->
+
+<section class="section" id="notes">
+
+<h2 class="section-title">
+📚 Course Notes
+</h2>
+
+<p class="section-text">
+Basic computer और course notes यहाँ पढ़ें।
+</p>
+
+<div class="grid">
+
+
+<div class="card">
+
+<span class="pill">
+FUNDAMENTALS
+</span>
+
+<h3>
+Computer Fundamentals
+</h3>
+
+<p>
+Computer, CPU, RAM, ROM, input/output
+devices और storage के basics।
+</p>
+
+<button
+class="btn btn-light"
+onclick="openNotes(
+'Computer Fundamentals',
+'Computer एक electronic device है जो data को process करके information देता है.\\n\\nInput Devices: Keyboard, Mouse, Scanner\\nOutput Devices: Monitor, Printer, Speaker\\nProcessing: CPU\\nStorage: HDD, SSD, Pen Drive'
+)">
+
+Read Notes
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<span class="pill">
+MS OFFICE
+</span>
+
+<h3>
+MS Word • Excel • PowerPoint
+</h3>
+
+<p>
+Office applications के important practical topics।
+</p>
+
+<button
+class="btn btn-light"
+onclick="openNotes(
+'MS Office Notes',
+'MS Word: Formatting, Tables, Page Setup.\\n\\nMS Excel: Rows, Columns, Formulas, Functions, Charts.\\n\\nPowerPoint: Slides, Themes, Transitions.'
+)">
+
+Read Notes
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<span class="pill">
+TALLY
+</span>
+
+<h3>
+Tally Prime + GST
+</h3>
+
+<p>
+Accounting, Ledger, Voucher, Inventory और GST basics।
+</p>
+
+<button
+class="btn btn-light"
+onclick="openNotes(
+'Tally Prime + GST',
+'Company Creation → Ledger → Groups → Vouchers → Purchase/Sales → GST → Reports.'
+)">
+
+Read Notes
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section" id="contact">
+
+<h2 class="section-title">
+📞 Contact Us
+</h2>
+
+<p class="section-text">
+Course details और admission के लिए contact करें।
+</p>
+
+<div class="grid">
+
+
+<div class="card contact-card">
+
+<h3>📍 Address</h3>
+
+<p>
+Aditya Computer Academy<br>
+Kandwa Panchkosi Road<br>
+Varanasi - 221106
+</p>
+
+<a
+class="btn btn-light"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Aditya+Computer+Academy+Kandwa+Panchkosi+Road+Varanasi+221106">
+
+Open Google Maps
+
+</a>
+
+</div>
+
+
+<div class="card contact-card">
+
+<h3>📞 Call / WhatsApp</h3>
+
+<p>
+9305066046
+</p>
+
+<div class="buttons"
+style="justify-content:center">
+
+<a
+class="btn btn-blue"
+href="tel:9305066046">
+
+Call
+
+</a>
+
+<a
+class="btn btn-green"
+target="_blank"
+href="https://wa.me/919305066046">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="card contact-card">
+
+<h3>📸 Instagram</h3>
+
+<p>
+@adityacomputeracademy
+</p>
+
+<a
+class="btn btn-light"
+target="_blank"
+href="https://www.instagram.com/adityacomputeracademy?stkn=dGVsMTVxcXZ2eTFo">
+
+Open Instagram
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<img
+src="logo.jpg"
+class="footer-logo"
+alt="ACA Logo">
+
+<h3>
+Aditya Computer Academy
+</h3>
+
+<p>
+Learn • Grow • Succeed
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<a href="#home">Home</a>
+
+<a href="#courses">Courses</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#admission">Admission</a>
+
+<a href="#portal">Student Portal</a>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<a href="tel:9305066046">
+📞 9305066046
+</a>
+
+<a href="https://wa.me/919305066046">
+💬 WhatsApp
+</a>
+
+<p>
+📍 Kandwa Panchkosi Road,
+Varanasi - 221106
+</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span>
+Aditya Computer Academy.
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING BUTTONS -->
+
+<div class="float-buttons">
+
+<a
+class="whatsapp"
+href="https://wa.me/919305066046"
+target="_blank">
+
+💬
+
+</a>
+
+<a
+class="phone"
+href="tel:9305066046">
+
+☎
+
+</a>
+
+</div>
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<button class="close" onclick="cl
